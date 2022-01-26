@@ -14,15 +14,14 @@ def bash_command(cmd):
 
 def turnoff():
     print("")
-    proc = subprocess.Popen('pacmd list-sink-inputs | grep -c "state: RUNNING"', shell="True", stdout=subprocess.PIPE)
-    output = proc.stdout.read()
-    print (output)
-    if ((output == b'0\n') & (check_audio == 'ON')) | (check_audio != 'ON'):
+
+    if ( (check_audio == 'ON')) | (check_audio != 'ON'):
          print (strftime("%H:%M:%S", localtime()) + "--> OKAY!!")
          pygame.init()
          screen = pygame.mouse.set_visible(0)
          screen = pygame.display.set_mode((size),pygame.FULLSCREEN)
          time.sleep( 20 )
+         print (strftime("%H:%M:%S", localtime()) + "--> Starting...again")
          pygame.mixer.music.load('notification.mp3')
          pygame.mixer.music.play(0)
          while pygame.mixer.music.get_busy(): 
