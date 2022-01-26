@@ -13,6 +13,14 @@ Recently, bad result comes, my eyes getting drier and drier each year, and keepi
 
 Luckly, I found this repo with simple python script could let us forcely rest our eyes! So I made some changes to adapt [Windows OS with Task Scheduler to auto turn it on](https://www.jcchouinard.com/python-automation-using-task-scheduler/) everytime we turn the power on. Hope this can release my eyes pain. 
 
+> In some situation of Task Scheduler, neigher .bat file does not work properly nor directly run python.exe (don't know why). But Powershell (.ps1) works.
+
+In short, simply type the power shell command (python <python "C:\Users\yc.keng\<yourPath>\eye_strain_reducer.py">) and save as .ps1 file. Finally follow [the guide of this page](https://blog.netwrix.com/2018/07/03/how-to-automate-powershell-scripts-with-task-scheduler/). (Don't forget to uncheck the only on AC power, I have been struggling this point because I did not in charge) 
 
 More info on his site:
 [Python on Rainnic](https://rainnic.altervista.org/tag/python)
+
+
+## Change log
+
+- 2022/01/26: Added info for "Use powershell to run python Script by Task Scheduler"
