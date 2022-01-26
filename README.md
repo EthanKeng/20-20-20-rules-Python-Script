@@ -11,7 +11,7 @@ As a modern human living in a full of digital devices world, we staring at PC/la
 
 Recently, bad result comes, my eyes getting drier and drier each year, and keeping twitching for more than couple weeks. Worstly, headache! So it is super important to find a way to force ourselfs resting our eyes. Then I found there is a rule called 20-20-20 which I think it can be a start point for me. 
 
-Luckly, I found this repo with simple python script could let us forcely rest our eyes! So I made some changes to adapt Windows OS and write .bat with Task Scheduler to auto turn it on everytime we turn the power on. Hope this can release my eyes pain. 
+Luckly, I found this repo with simple python script could let us forcely rest our eyes! So I made some changes to adapt [Windows OS with Task Scheduler to auto turn it on](https://www.jcchouinard.com/python-automation-using-task-scheduler/) everytime we turn the power on. Hope this can release my eyes pain. 
 
 
 More info on his site:
