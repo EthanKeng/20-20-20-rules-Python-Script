@@ -24,3 +24,5 @@ More info on his site:
 ## Change log
 
 - 2022/01/26: Added info for "Use powershell to run python Script by Task Scheduler"
+- 2022/01/26: Changed the way of control screen from pygame to screen-brightness-control. Because pygame.display.set_mode is not working when not focus on the terminal window (maybe belongs to Windows OS feature)
+
