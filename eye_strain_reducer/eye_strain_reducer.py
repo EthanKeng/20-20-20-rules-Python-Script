@@ -3,14 +3,12 @@ import subprocess
 import schedule
 import time
 from time import localtime, strftime
+import screen_brightness_control as sbc
 
 # SETTINGS:
 size = (1920, 1080)   # size of your screen
 check_audio = 'OFF'   # with 'ON' the script doesn't turn off the screen if your audio card is busy
 duration = 1200       # the time interval in seconds
-
-def bash_command(cmd):
-    subprocess.Popen(cmd, shell=True, executable='/bin/bash')
 
 def turnoff():
     print("")
@@ -20,9 +18,11 @@ def turnoff():
          pygame.init()
          pygame.mixer.music.load('take_a_rest.mp3')
          pygame.mixer.music.play(0)
-         screen = pygame.mouse.set_visible(0)
-         screen = pygame.display.set_mode((size),pygame.FULLSCREEN)
+         current_brightness = sbc.get_brightness()
+         print("Current brightness: ",current_brightness)
+         sbc.fade_brightness(0)
          time.sleep( 20 )
+         sbc.fade_brightness(current_brightness)
          print (strftime("%H:%M:%S", localtime()) + "--> Starting...again")
          
          pygame.mixer.music.load('notification.mp3')
