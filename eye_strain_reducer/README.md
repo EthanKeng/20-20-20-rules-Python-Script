@@ -12,6 +12,7 @@ I wrote it with Python 3.6 and the following packages are required:
 -   schedule;
 -   time;
 -   ~~pacmd (i.e. Pulseaudio and strictly connected to the OS)~~. <-- Delete this from Python Script for using in Windows system
+-   screen-brightness-control;
 
 ## Settings:
 At the beginning of the file there is three items to adapt the program at your needs:
